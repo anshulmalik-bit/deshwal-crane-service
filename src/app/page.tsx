@@ -43,58 +43,126 @@ export default function HomePage() {
   return (
     <>
       {/* 1. Hero Section */}
-      <section className="bg-graphite py-20 md:py-32 border-b border-steel/30">
+      <section className="bg-graphite py-16 md:py-24 border-b border-steel/30">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <span className="font-heading text-hazard text-base sm:text-lg font-bold uppercase tracking-widest block mb-3">
-              Heavy Equipment Hire &amp; Rental
-            </span>
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold uppercase tracking-wider text-concrete leading-tight">
-              {BUSINESS_NAME}
-            </h1>
-            <p className="mt-4 text-concrete/80 text-lg md:text-xl font-body leading-relaxed">
-              {TAGLINE}
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            {/* Left Column: Heading & CTAs */}
+            <div className="lg:col-span-7">
+              <span className="font-heading text-hazard text-base sm:text-lg font-bold uppercase tracking-widest block mb-3">
+                Heavy Equipment Hire &amp; Rental &bull; NH44 Corridor
+              </span>
+              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold uppercase tracking-wider text-concrete leading-tight">
+                {BUSINESS_NAME}
+              </h1>
+              <p className="mt-4 text-concrete/80 text-lg md:text-xl font-body leading-relaxed max-w-2xl">
+                {TAGLINE}
+              </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <a
-                href={`tel:+91${PHONE_PRIMARY}`}
-                className="inline-flex items-center gap-2.5 bg-hazard hover:brightness-110 active:scale-95 text-white font-heading font-bold text-lg uppercase tracking-wider px-8 py-3.5 shadow-sm transition-all"
-                aria-label={`Call ${PHONE_PRIMARY}`}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-5 h-5"
-                  aria-hidden="true"
+              <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-concrete/80">
+                <span className="inline-flex items-center gap-1.5 bg-steel/20 border border-steel/30 px-3 py-1.5 font-medium">
+                  <span className="text-hazard">📍</span> Bahalgarh Chowk, Sonipat
+                </span>
+                <span className="inline-flex items-center gap-1.5 bg-steel/20 border border-steel/30 px-3 py-1.5 font-medium">
+                  <span className="text-hazard">🏗️</span> 7+ Heavy Machinery Types
+                </span>
+              </div>
+
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <a
+                  href={`tel:+91${PHONE_PRIMARY}`}
+                  className="inline-flex items-center gap-2.5 bg-hazard hover:brightness-110 active:scale-95 text-white font-heading font-bold text-lg uppercase tracking-wider px-8 py-3.5 shadow-sm transition-all"
+                  aria-label={`Call ${PHONE_PRIMARY}`}
                 >
-                  <path
-                    fillRule="evenodd"
-                    d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
-                    clipRule="evenodd"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="w-5 h-5"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  <span>Call Now</span>
+                </a>
+
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 bg-green-600 hover:bg-green-500 active:scale-95 text-white font-heading font-bold text-lg uppercase tracking-wider px-8 py-3.5 shadow-sm transition-all"
+                  aria-label="Enquire on WhatsApp"
+                >
+                  <svg
+                    className="w-5 h-5 fill-current"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                  </svg>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Right Column: Fleet Machinery Card */}
+            <div className="lg:col-span-5">
+              <div className="bg-charcoal border border-steel/40 shadow-xl overflow-hidden">
+                <div className="relative aspect-[16/10] w-full bg-steel/20">
+                  <Image
+                    src="/images/fleet/hydra-crane.webp"
+                    alt="Hydra Crane available for hire at Deshwal Crane Service"
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-cover"
                   />
-                </svg>
-                <span>Call Now</span>
-              </a>
+                  <div className="absolute top-3 left-3 bg-hazard text-white text-xs font-heading font-bold uppercase tracking-wider px-3 py-1 shadow-sm">
+                    Fleet In Action
+                  </div>
+                </div>
 
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 bg-green-600 hover:bg-green-500 active:scale-95 text-white font-heading font-bold text-lg uppercase tracking-wider px-8 py-3.5 shadow-sm transition-all"
-                aria-label="Enquire on WhatsApp"
-              >
-                <svg
-                  className="w-5 h-5 fill-current"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
-                </svg>
-                <span>WhatsApp</span>
-              </a>
+                <div className="p-5 sm:p-6 space-y-4">
+                  <div className="flex items-center justify-between border-b border-steel/30 pb-3">
+                    <div>
+                      <span className="text-xs uppercase tracking-widest text-hazard font-heading font-bold block">
+                        Operating Yard
+                      </span>
+                      <span className="font-heading text-lg font-bold text-concrete">
+                        Bahalgarh Chowk, Sonipat
+                      </span>
+                    </div>
+                    <span className="text-xs font-semibold text-concrete/70 bg-steel/30 px-2.5 py-1 border border-steel/40">
+                      NH44 Corridor
+                    </span>
+                  </div>
+
+                  <div className="text-xs text-concrete/80 space-y-1.5">
+                    <p className="flex items-center gap-2">
+                      <span className="text-hazard font-bold">✓</span>
+                      <span>Loading, Unloading &amp; Erection Support</span>
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <span className="text-hazard font-bold">✓</span>
+                      <span>Hydra, Mobile Cranes, Forklifts &amp; Machinery</span>
+                    </p>
+                  </div>
+
+                  <div className="pt-1">
+                    <Link
+                      href="/services"
+                      className="inline-flex items-center justify-between w-full bg-graphite hover:bg-steel/30 text-concrete text-sm font-heading font-bold uppercase tracking-wider px-4 py-2.5 border border-steel/40 transition-colors"
+                    >
+                      <span>View All 7 Equipment Types</span>
+                      <span aria-hidden="true">&rarr;</span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
