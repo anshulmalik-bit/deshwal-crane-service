@@ -125,25 +125,40 @@ export default function HomePage() {
       </section>
 
       {/* 3. About Preview */}
-      <section className="py-16 md:py-24 border-b border-steel/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="font-heading text-hazard text-sm uppercase tracking-widest font-bold block mb-2">
-            About Our Company
-          </span>
-          <h2 className="font-heading text-3xl sm:text-4xl font-bold uppercase tracking-wide text-charcoal mb-6">
-            Trusted Heavy Equipment Service Provider
-          </h2>
-          <p className="text-charcoal/85 font-body text-lg sm:text-xl leading-relaxed">
-            Deshwal Crane Service is a trusted and experienced heavy equipment service provider with 17+ years in the industry. We provide reliable, efficient equipment services for construction, industrial, and infrastructure needs.
-          </p>
-          <div className="mt-8">
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2 font-heading font-bold text-lg uppercase tracking-wider text-hazard hover:text-hazard/80 transition-colors"
-            >
-              <span>Learn More About Us</span>
-              <span aria-hidden="true">&rarr;</span>
-            </Link>
+      <section className="py-16 md:py-24 border-b border-steel/30 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            {/* Text Side */}
+            <div>
+              <span className="font-heading text-hazard text-sm uppercase tracking-widest font-bold block mb-2">
+                About Our Company
+              </span>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold uppercase tracking-wide text-charcoal mb-6">
+                Trusted Heavy Equipment Service Provider
+              </h2>
+              <p className="text-charcoal/85 font-body text-lg sm:text-xl leading-relaxed mb-8">
+                Deshwal Crane Service is a trusted and experienced heavy equipment service provider with 17+ years in the industry. We provide reliable, efficient equipment services for construction, industrial, and infrastructure needs.
+              </p>
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 font-heading font-bold text-lg uppercase tracking-wider text-hazard hover:text-hazard/80 transition-colors"
+              >
+                <span>Learn More About Us</span>
+                <span aria-hidden="true">&rarr;</span>
+              </Link>
+            </div>
+            {/* Image Side */}
+            <div className="relative border border-steel/20 shadow-sm bg-concrete p-2">
+              <div className="relative aspect-[4/3] w-full overflow-hidden">
+                <Image
+                  src="/images/storefront.webp"
+                  alt="Deshwal Crane Service Office at Bahalgarh Chowk"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
