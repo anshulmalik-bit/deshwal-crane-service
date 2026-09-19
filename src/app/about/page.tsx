@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { PHONE_PRIMARY, WHATSAPP_URL } from '@/data/equipment';
+import { PHONE_PRIMARY, WHATSAPP_URL, STOREFRONT_IMAGE } from '@/data/equipment';
 
 export const metadata: Metadata = {
   title: 'About Deshwal Crane Service — 17+ Years in Heavy Equipment',
@@ -59,7 +59,7 @@ export default function AboutPage() {
             </h2>
             <div className="overflow-hidden border border-steel/20">
               <Image
-                src="/images/storefront.webp"
+                src={STOREFRONT_IMAGE}
                 alt="Deshwal Crane Service shopfront at Bahalgarh Chowk, Sonipat — located next to P.L. Traders"
                 width={900}
                 height={600}

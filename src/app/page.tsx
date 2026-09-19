@@ -8,6 +8,7 @@ import {
   PHONE_SECONDARY,
   WHATSAPP_URL,
   equipment,
+  STOREFRONT_IMAGE,
 } from '@/data/equipment';
 
 export const metadata: Metadata = {
@@ -114,7 +115,7 @@ export default function HomePage() {
               <div className="bg-charcoal border border-steel/40 shadow-xl overflow-hidden">
                 <div className="relative aspect-[16/10] w-full bg-steel/20">
                   <Image
-                    src="/images/fleet/hydra-crane.webp"
+                    src={equipment[0].image}
                     alt="Hydra Crane available for hire at Deshwal Crane Service"
                     fill
                     priority
@@ -219,7 +220,7 @@ export default function HomePage() {
             <div className="relative border border-steel/20 shadow-sm bg-concrete p-2">
               <div className="relative aspect-[4/3] w-full overflow-hidden">
                 <Image
-                  src="/images/storefront.webp"
+                  src={STOREFRONT_IMAGE}
                   alt="Deshwal Crane Service Office at Bahalgarh Chowk"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

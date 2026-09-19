@@ -1,12 +1,15 @@
 import { EquipmentItem } from "@/types";
 
+export const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+export const STOREFRONT_IMAGE = `${basePath}/images/storefront.webp`;
+
 export const equipment: EquipmentItem[] = [
   {
     id: "hydra-crane",
     name: "Hydra Crane",
     description:
       "Versatile pick-and-carry crane used in construction, loading, and industrial lifting operations.",
-    image: "/images/fleet/hydra-crane.webp",
+    image: `${basePath}/images/fleet/hydra-crane.webp`,
     alt: "Hydra crane operated by Deshwal Crane Service",
   },
   {
@@ -14,7 +17,7 @@ export const equipment: EquipmentItem[] = [
     name: "New Generation Crane",
     description:
       "Modern heavy-duty crane with advanced safety features for demanding construction and infrastructure projects.",
-    image: "/images/fleet/new-generation-crane.webp",
+    image: `${basePath}/images/fleet/new-generation-crane.webp`,
     alt: "New generation crane from Deshwal Crane Service fleet",
   },
   {
@@ -22,7 +25,7 @@ export const equipment: EquipmentItem[] = [
     name: "Forklift",
     description:
       "Heavy-duty forklift for warehousing, yard handling, and material movement at construction and industrial sites.",
-    image: "/images/fleet/forklift.webp",
+    image: `${basePath}/images/fleet/forklift.webp`,
     alt: "Heavy-duty forklift available for hire from Deshwal Crane Service",
   },
   {
@@ -30,7 +33,7 @@ export const equipment: EquipmentItem[] = [
     name: "Recovery Van",
     description:
       "Recovery and breakdown vehicle for heavy equipment transport and roadside vehicle recovery.",
-    image: "/images/fleet/recovery-van.webp",
+    image: `${basePath}/images/fleet/recovery-van.webp`,
     alt: "Recovery van from Deshwal Crane Service for heavy vehicle recovery",
   },
   {
@@ -38,7 +41,7 @@ export const equipment: EquipmentItem[] = [
     name: "Crawler Crane",
     description:
       "Heavy crawler crane for foundation work, bridge erection, and large-scale construction lifting.",
-    image: "/images/fleet/crawler-crane.webp",
+    image: `${basePath}/images/fleet/crawler-crane.webp`,
     alt: "Crawler crane from Deshwal Crane Service at a project site",
   },
   {
@@ -46,7 +49,7 @@ export const equipment: EquipmentItem[] = [
     name: "Backhoe Loader",
     description:
       "Backhoe loader for site preparation, digging, trenching, and earthmoving operations.",
-    image: "/images/fleet/backhoe-loader.webp",
+    image: `${basePath}/images/fleet/backhoe-loader.webp`,
     alt: "Backhoe loader available for hire from Deshwal Crane Service",
   },
   {
@@ -54,7 +57,7 @@ export const equipment: EquipmentItem[] = [
     name: "Soil Compactor",
     description:
       "Soil compactor for road construction, site levelling, and ground compaction in infrastructure projects.",
-    image: "/images/fleet/soil-compactor.webp",
+    image: `${basePath}/images/fleet/soil-compactor.webp`,
     alt: "Soil compactor from Deshwal Crane Service for road and site work",
   },
 ];
